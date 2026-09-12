@@ -121,7 +121,7 @@ main {
 
 .about-photo {
   border: 1px solid var(--color-line);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 2 / 3;
   overflow: hidden;
   background: #eeece5;
 }
