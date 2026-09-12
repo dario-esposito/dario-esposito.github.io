@@ -67,12 +67,21 @@ img {
 }
 
 .nav-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-serif);
   font-size: 1.15rem;
   font-weight: 600;
   color: var(--color-ink);
   text-decoration: none;
   letter-spacing: 0.01em;
+}
+
+.home-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
 }
 
 .nav-links {
