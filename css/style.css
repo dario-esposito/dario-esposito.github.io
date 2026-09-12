@@ -1,0 +1,305 @@
+/* ============================================================
+   Personal academic page — shared stylesheet
+   Palette, type and layout tokens live at the top so the whole
+   site can be restyled by editing this one block.
+   ============================================================ */
+
+:root {
+  /* Colour */
+  --color-paper: #f7f5f0;      /* page background, warm paper white */
+  --color-ink: #1b2a4a;        /* headings, nav, primary accent (deep ink-blue) */
+  --color-ink-hover: #142038;  /* darker ink for hover states */
+  --color-text: #2b2b28;       /* body copy, warm near-black */
+  --color-muted: #6b675e;      /* secondary text */
+  --color-gold: #a6803d;       /* accent rule/role colour, muted brass */
+  --color-line: #dad5c8;       /* hairline borders */
+
+  /* Type */
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Layout */
+  --content-width: 760px;
+  --page-pad: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------- Navigation -------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.nav {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 22px var(--page-pad);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--color-ink);
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-gold);
+}
+
+/* -------------------- Page shell -------------------- */
+
+main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 64px var(--page-pad) 96px;
+}
+
+/* -------------------- About page -------------------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.about-photo {
+  border: 1px solid var(--color-line);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #eeece5;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+.about-name {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0 0 6px;
+}
+
+.about-role {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-gold);
+  margin: 0 0 22px;
+}
+
+.about-bio p {
+  margin: 0 0 16px;
+  max-width: 62ch;
+}
+
+.cv-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 22px;
+  border: 1px solid var(--color-ink);
+  color: var(--color-ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cv-link:hover,
+.cv-link:focus-visible {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+@media (max-width: 620px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photo {
+    width: 180px;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* -------------------- Research: coming soon -------------------- */
+
+.coming-soon h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--color-ink);
+  margin: 0 0 14px;
+}
+
+.coming-soon p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* -------------------- Research: dossier list (future) -------------------- */
+
+.research-section {
+  margin-top: 48px;
+}
+
+.research-section:first-of-type {
+  margin-top: 8px;
+}
+
+.research-section > h2 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0 0 4px;
+}
+
+.project {
+  border-top: 1px solid var(--color-line);
+  padding: 20px 0;
+}
+
+.project-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--color-text);
+}
+
+.project-links {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 10px;
+}
+
+.project-links a {
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+  border-bottom-color: var(--color-ink);
+}
+
+.project-links .sep {
+  margin: 0 8px;
+  color: var(--color-line);
+}
+
+.abstract {
+  margin-top: 4px;
+}
+
+.abstract summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--color-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.abstract summary::-webkit-details-marker {
+  display: none;
+}
+
+.abstract summary::before {
+  content: "▸";
+  font-size: 0.75em;
+  transition: transform 0.15s ease;
+}
+
+.abstract[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.abstract p {
+  margin: 10px 0 0;
+  max-width: 68ch;
+  color: var(--color-text);
+  font-size: 0.96rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

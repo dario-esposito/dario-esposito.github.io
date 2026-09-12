@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-name" href="index.html">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="index.html">About me</a></li>
+        <li><a href="research.html" aria-current="page">Research</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="font-family: var(--font-serif); color: var(--color-ink); margin: 0 0 8px;">Research</h1>
+
+    <!-- ============================================================
+         HOW TO USE THIS FILE
+         ------------------------------------------------------------
+         Each project below is one <div class="project"> block. To add
+         a new project, copy an existing block (including the closing
+         </div>) and edit:
+           - the title
+           - the row of links (pdf / appendix / code) — delete any
+             link a given project doesn't have
+           - the abstract text inside <details>
+
+         LINKING CODE:
+           - Git repository -> point the "code" link straight at the
+             repo, e.g. href="https://github.com/yourusername/repo-name"
+           - Uploaded folder -> add the folder to this repository (e.g.
+             under a top-level /code/project-name/ directory) and link
+             to it with a relative path, e.g. href="code/project-name/"
+         ============================================================ -->
+
+    <section class="research-section">
+      <h2>Work in Progress</h2>
+
+      <div class="project">
+        <h3 class="project-title">Project Title One</h3>
+        <p class="project-links">
+          <a href="papers/project-one.pdf">pdf</a>
+          <span class="sep">/</span>
+          <a href="papers/project-one-appendix.pdf">appendix</a>
+          <span class="sep">/</span>
+          <a href="https://github.com/yourusername/project-one">code</a>
+        </p>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>
+            Replace this text with the abstract of the project. Keep it to
+            a short paragraph — this panel is meant for a quick summary,
+            not the full introduction of the paper.
+          </p>
+        </details>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Project Title Two</h3>
+        <p class="project-links">
+          <a href="papers/project-two.pdf">pdf</a>
+          <span class="sep">/</span>
+          <a href="code/project-two/">code</a>
+        </p>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>
+            This entry has no appendix, so that link was simply left out
+            of the row above — only include the links that apply to a
+            given project.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="research-section">
+      <h2>Publications</h2>
+
+      <div class="project">
+        <h3 class="project-title">Published Paper Title, Journal Name (Year)</h3>
+        <p class="project-links">
+          <a href="papers/published-paper.pdf">pdf</a>
+        </p>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>
+            Replace this text with the abstract of the published paper.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="research-section">
+      <h2>Working Papers</h2>
+
+      <div class="project">
+        <h3 class="project-title">Working Paper Title</h3>
+        <p class="project-links">
+          <a href="papers/working-paper.pdf">pdf</a>
+          <span class="sep">/</span>
+          <a href="papers/working-paper-appendix.pdf">appendix</a>
+        </p>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>
+            Replace this text with the abstract of the working paper.
+          </p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
